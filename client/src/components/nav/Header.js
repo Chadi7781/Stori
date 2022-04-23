@@ -1,82 +1,14 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
-  MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
-  XIcon,
-} from '@heroicons/react/outline'
+
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-
+import { solutions,callsToAction,resources,recentPosts
+}from './HeaderItems'
 import {Link} from "react-router-dom";
-
-const solutions = [
-  {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: CursorClickIcon,
-  },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: ViewGridIcon,
-  },
-  {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
-    href: '#',
-    icon: RefreshIcon,
-  },
-]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
-const resources = [
-  {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-    icon: SupportIcon,
-  },
-  {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
-    icon: CalendarIcon,
-  },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
-]
-const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+import  { ButtonPrimary, ButtonSecondly } from '../../util/custombutton/CustomButton';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -170,7 +102,7 @@ export default function Header() {
               )}
             </Popover> */}
 
-            <Link to ={"/"} className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to ={"/"} className="text-base font-extrabold text-gray-500  hover:text-gray-900">
               Home
             </Link>
           
@@ -183,7 +115,7 @@ export default function Header() {
                   <Popover.Button
                     className={classNames(
                       open ? 'text-gray-900' : 'text-gray-500',
-                      'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      'group bg-white rounded-md inline-flex items-center text-base font-extrabold hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}
                   >
                     <span>More</span>
@@ -248,7 +180,7 @@ export default function Header() {
                 </>
               )}
             </Popover>
-            <Link to={"contact"}className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link to={"contact"}className="text-base font-extrabold text-gray-500 hover:text-gray-900">
             Contact Us
             </Link>
           </Popover.Group>
@@ -258,28 +190,22 @@ export default function Header() {
             </Link> */}
             
           <Link to="/signin">
-             <button  className="ml-8  inline-flex items-center px-6 py-3
-            
-            text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border 
-            border-gray-200 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none 
-            ease-linear transition-all duration-150" type="button">
+             <ButtonPrimary text="Sign In"  className="ml-8  inline-flex items-center px-6 py-3"/>
+
+              
             
             
-             Sign in
-             </button>
             </Link>
-                  
-          <Link to="/signup">
-          
-             <button  class="ml-8  inline-flex items-center px-6 py-3 rounded overflow-hidden group
-              bg-blue-500 relative hover:bg-gradient-to-r 
-              hover:from-blue-500 hover:to-purple-500 text-white hover:ring-2 focus:outline-none hover:ring-offset-2 hover:ring-blue-400 transition-all ease-out duration-300">
-    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-    <span class="relative">             Sign Up
-</span>
-</button>
+      
+      
+            {/* <Link to="/signup">
+             <ButtonSecondly text="Sign In"  className="ml-14 inline-flex items-center px-6 py-3"/>
+
+              
+            
+            
             </Link>
-          
+           */}
           </div>
         </div>
       </div>

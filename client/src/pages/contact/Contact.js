@@ -2,7 +2,6 @@ import React from 'react'
 import { MailOutlined,LockOutlined,UserOutlined } from '@ant-design/icons';
 
 import { Input } from 'antd';
-import Footer from '../footers/Footer';
 const { TextArea } = Input;
 function ContactPartner() {
     const onChange = ()=> {
@@ -84,7 +83,6 @@ function ContactPartner() {
 
 
           </section>
-                    <Footer/>
 </>
   )
 }

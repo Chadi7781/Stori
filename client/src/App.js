@@ -6,6 +6,7 @@ import {Switch,Route,BrowserRouter} from "react-router-dom";
 import Header from './components/nav/Header';
 import Register from './pages/auth/Register';
 import Login from "./pages/auth/Login";
+import ContactPartner from "./pages/contact/Contact";
 
 
 const App = () => (
@@ -18,12 +19,17 @@ const App = () => (
         <Home/>
       
       </Route>
+
+      <Route exact path="/contact">
+        <ContactPartner/>
+      
+      </Route>
     
-      <Route exact path="/signup">
+      <Route exact path="/register">
         <Register/>
         </Route>
       
-        <Route exact path="/signin">
+        <Route exact path="/login">
         <Login/>
       
       </Route>

@@ -1,6 +1,12 @@
 import React from 'react'
 import Typical from 'react-typical'
 
+import {ImageAnimated} from  "../../util/animations/ImageAnimated";
+import {ButtonAnimated} from  "../../util/animations/ButtonAnimated";
+import { TitleAnimated } from '../../util/animations/TitleAnimated';
+import { TextAnimated } from '../../util/animations/TextAnimated';
+
+
 //hez
 
 function Home() {
@@ -15,14 +21,14 @@ function Home() {
 
 
       <div className="sm:text-center lg:text-left">
-          <TitleAnimated/>
     
-            <TextAnimated/>
+            <TitleAnimated/>
            
-            <ButtonAnimated/>
+      
             </div>
 
-
+            <TextAnimated/>
+            <ButtonAnimated/>
 
       
     
@@ -37,8 +43,8 @@ function Home() {
     <ImageAnimated/>
  
  
-   
-    <section className="mt-56 md:mt-56 pb-20 p-24 relative bg-blueGray-100">
+{/*    
+    <section className="mt-56 md:mt-56 pb-20 p-24 relative bg-gray-100">
     <div class="justify-center text-center flex flex-wrap mt-4"><div class="w-full md:w-6/12 px-12 md:px-4">
     <h1 class="font-semibold text-4xl">Our Services</h1>
      </div></div>
@@ -68,6 +74,25 @@ function Home() {
 
            </div>
            <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+             <div className="relative flex flex-col min-w-0 break-word bg-white w-full mb-8 shadow-lg rounded-lg">
+               <div className="px-4 py-4 flex-auto">
+               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full
+               bg-gradient-to-r  from-blue-500 to-purple-500">
+               <i class="fas fa-hospital"></i></div>
+               <h6 class="text-xl font-semibold">Locations</h6>
+               <p class="mt-2 mb-4 text-slate-500">Divide details about your product or agency work into parts. 
+               A paragraph describing a feature will be enough.</p>
+               <button class="
+             focus:ring-blue-700 text-sm font-semibold leading-none
+             text-white focus:outline-none bg-gradient-to-r from-cyan-500 to-blue-500 border rounded hover:purple-pink-500 hover:to-purple-700 py-4 w-full 
+             ease-linear transition-all duration-150" type="button">Read More</button>
+               </div>
+             </div>
+            
+
+
+           </div>
+                <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
              <div className="relative flex flex-col min-w-0 break-word bg-white w-full mb-8 shadow-lg rounded-lg">
                <div className="px-4 py-4 flex-auto">
                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full
@@ -151,7 +176,7 @@ function Home() {
 </div>
 </div>
 
-</section>
+</section> */}
 
      
     </>
