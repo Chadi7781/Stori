@@ -26,7 +26,7 @@ export  const ButtonAnimated =() => {
       
          
       <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-          <button class="mt-6 px-8 py-4 rounded-full font-normal tracking-wide 
+          <button className="mt-6 px-8 py-4 rounded-full font-normal tracking-wide 
           
           b-2 border-blue-500 bg-white
           text-black  hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out" style={borderButton}>

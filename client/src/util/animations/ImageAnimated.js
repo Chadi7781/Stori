@@ -18,12 +18,12 @@ export  const ImageAnimated =() => {
   return( 
     <StyleRoot>
       
-      <div className="lg:absolute lg:inset-y-1 mt-24 lg:mx-auto lg:right-0 top-0 lg:w-1/2  h-full
+      <div className="lg:absolute lg:inset-y-0 mt-24  lg:mx-auto lg:right-0 top-0 lg:w-1/2   
       
       bg-cover bg-center bg-no-repeat
       " style={styles.zoomIn}>
        <img
-          className=" hero-picture object-contain  h-2/3 w-full mt-1 mb-8"   src="assets/images/ecommerce-cover.png"/>
+          className=" hero-picture object-contain    h-3/4 w-full mt-1 mb-8"   src="assets/images/ecommerce-cover.png"/>
    
       </div>
     </StyleRoot>

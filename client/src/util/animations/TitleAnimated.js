@@ -23,7 +23,7 @@ export  const TitleAnimated =() => {
 Increasing access 
 
 
-<h3 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-[#fa8142] to-[#ff4088]">
+<h3 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-[#fa8142] to-[#ff4088]">
     
     <Typical
   steps={['lowering costs', 5000, 'Improving health!', 5000]}

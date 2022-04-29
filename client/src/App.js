@@ -9,10 +9,16 @@ import Login from "./pages/auth/Login";
 import ContactPartner from "./pages/contact/Contact";
 
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import RegisterComplete from "./pages/auth/RegisterComplete";
+
+
 const App = () => (
 
   <>
           <Header/>
+          <ToastContainer/>
 
     <Switch>
       <Route exact path="/">
@@ -20,10 +26,10 @@ const App = () => (
       
       </Route>
 
-      <Route exact path="/contact">
+      {/* <Route exact path="/contact">
         <ContactPartner/>
       
-      </Route>
+      </Route> */}
     
       <Route exact path="/register">
         <Register/>
@@ -32,8 +38,12 @@ const App = () => (
         <Route exact path="/login">
         <Login/>
       
+      
       </Route>
-
+      <Route exact path="/register/complete">
+        <RegisterComplete/>
+      
+      </Route>
     </Switch>
   
   
