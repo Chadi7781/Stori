@@ -277,7 +277,7 @@ import { toast } from 'react-toastify';
 
 
 import {auth} from "../../firebaseconfig"
-import {sendSignInLinkToEmail,getAuth,signInWithEmailLink  } from 'firebase/auth';
+import {sendSignInLinkToEmail,getAuth,signInWithEmailLink,updatePassword   } from 'firebase/auth';
 
 function RegisterComplete({history}) {
 
@@ -324,12 +324,17 @@ function RegisterComplete({history}) {
 
       let user = auth.currentUser;
 
-      await user.updatePassword(formValues.password);
+       updatePassword(user,formValues.password).then(() => {
+
+        alert('Updated Successfully')
+       }).catch(error => {
+         alert('An error occured')
+       });
       const idTokenResult = await user.getIdTokenResult();
 
       console.log("user",user,"idTokenResult",idTokenResult);
 
-      history.push("/")
+      //history.push("/")
       
     }catch(error) {
       console.log("error",error);
